@@ -5,6 +5,10 @@ spring:
   application:
     name: igor-config-server
     
-  profiles:
-    active:
-    - native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/IgorCastro-dev/igor-config-server
+          search-paths:
+          - 'greeting-service*'
